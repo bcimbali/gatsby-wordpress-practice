@@ -1,14 +1,5 @@
 require('dotenv').config()
 
-console.log(
-  '.env file: ',
-  process.env.API_TEST,
-  process.env.CLIENT_SECRET,
-  process.env.CLIENT_ID,
-  process.env.WPCOM_USER,
-  process.env.WPCOM_PASS
-)
-
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
