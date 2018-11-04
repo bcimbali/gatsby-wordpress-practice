@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => {
   const testImage = data.allWordpressWpMedia.edges[0].node.source_url
-  const imageCaption = data.allWordpressWpMedia.edges[0].node.caption
+  // const imageCaption = data.allWordpressWpMedia.edges[0].node.caption
   return (
     <Layout>
       {console.log('data: ', data)}
