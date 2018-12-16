@@ -12,12 +12,10 @@ const IndexPage = ({ data }) => {
       {console.log('data: ', data)}
       <h1>Hi</h1>
       <p>Gatsby and Wordpress Style Here</p>
-      {/* <img alt="Penguins walking" src={testImage} />
-      {data.allWordpressWpMedia.edges[0].node.caption} */}
       {data.allWordpressWpMedia.edges.map(({ node }) => (
         <div key={node.slug}>
           <img key={node.id} alt={node.caption} src={node.source_url} />
-          <p>{node.caption}</p>
+          <div dangerouslySetInnerHTML={{ __html: `${node.caption}` }} />
         </div>
       ))}
       <Link to="/page-2/">Go to page 2</Link>
